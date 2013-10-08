@@ -38,3 +38,10 @@ repository. Use `git checkout` with each tag to see the code for that stage:
     Python and pass it to the MainWindow instance for it to use. This is done
     in preparation for the next step.
 
+ 6. extended_dialog_in_python
+
+    The code here gets a little convoluted because the GUI of the dialog is
+    already well defined in C++, but we create a Python subclass of the C++
+    LoginDialog class and modify the GUI a little, using some run-time tricks
+    enabled by Qt. We also add a method to the dialog to check that the user's
+    input is not completely invalid.
