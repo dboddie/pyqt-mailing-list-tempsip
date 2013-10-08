@@ -2,4 +2,5 @@
 
 %Import QtGui/QtGuimod.sip
 
+%Include LoginDialog.sip
 %Include MainWindow.sip

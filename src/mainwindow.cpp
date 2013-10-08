@@ -49,6 +49,9 @@ LoginDialog *MainWindow::getLoginDialog() const
 
 void MainWindow::setLoginDialog(LoginDialog *dialog)
 {
+    if (m_dialog)
+        m_dialog->deleteLater();
+
     m_dialog = dialog;
 }
 

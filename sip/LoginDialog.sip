@@ -1,5 +1,5 @@
 /*
- * mainwindow.h - Definition of a main window class.
+ * LoginDialog.sip - Wrapper description for the LoginDialog class.
  *
  * Copyright (C) 2013 David Boddie <david.boddie@met.no>
  *
@@ -19,29 +19,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
-#include <QMainWindow>
-
-class LoginDialog;
-
-class MainWindow : public QMainWindow
+class LoginDialog : public QDialog
 {
-    Q_OBJECT
+%TypeHeaderCode
+#include "logindialog.h"
+%End
 
 public:
-    MainWindow();
-    ~MainWindow();
-
-    LoginDialog *getLoginDialog() const;
-    void setLoginDialog(LoginDialog *dialog);
-
-private slots:
-    void showLoginDialog();
-
-private:
-    LoginDialog *m_dialog;
+    LoginDialog(QWidget *parent = 0);
+    ~LoginDialog();
 };
-
-#endif

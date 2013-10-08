@@ -23,11 +23,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
 from PyQt4.QtGui import QApplication
-from wrapped_app import MainWindow
+from wrapped_app import LoginDialog, MainWindow
 
 if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     window = MainWindow()
+    login_dialog = LoginDialog()
+    window.setLoginDialog(login_dialog)
     window.show()
     sys.exit(app.exec_())
