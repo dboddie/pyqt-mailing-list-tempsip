@@ -1,4 +1,4 @@
-HEADERS = logindialog.h mainwindow.h
-SOURCES = logindialog.cpp main.cpp mainwindow.cpp
+HEADERS = tempsip.h
+SOURCES = tempsip.cpp
 TEMPLATE = lib
-TARGET = wrapped_app
+TARGET = tempsip
